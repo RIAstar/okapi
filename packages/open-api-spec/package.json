@@ -1,0 +1,19 @@
+{
+  "name": "@okapi/open-api-spec",
+  "version": "0.0.1",
+  "dependencies": {},
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "name": "open-api-spec",
+    "tags": [
+      "type:spec",
+      "scope:open-api"
+    ]
+  }
+}
