@@ -6,9 +6,9 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 
 
-export default defineConfig({
+export default defineConfig(() => ({
     root: __dirname,
-    cacheDir: '../../node_modules/.vite/packages/open-api-spec',
+    cacheDir: '../../node_modules/.vite/packages/open-api-parser',
     plugins: [
         nxViteTsPaths(),
         nxCopyAssetsPlugin(['*.md']),
@@ -30,11 +30,11 @@ export default defineConfig({
         lib: {
             // Could also be a dictionary or array of multiple entry points.
             entry: 'src/index.ts',
-            name: 'open-api-spec',
+            name: 'open-api-parser',
             fileName: 'index',
             // Change this to the formats you want to support.
             // Don't forget to update your package.json as well.
-            formats: ['es', 'cjs']
+            formats: ['es' as const, 'cjs' as const]
         },
         rollupOptions: {
             // External packages that should not be bundled into your library.
@@ -45,11 +45,11 @@ export default defineConfig({
         watch: false,
         globals: true,
         environment: 'node',
-        include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+        include: ['{src,tests}/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
         reporters: ['default'],
         coverage: {
-            reportsDirectory: '../../coverage/open-api-spec',
-            provider: 'v8',
+            reportsDirectory: '../../coverage/open-api-parser',
+            provider: 'v8' as const,
         }
     },
-});
+}));

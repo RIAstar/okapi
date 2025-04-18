@@ -1,0 +1,12 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "open-api-parser",
+  "tags": [
+    "type:parser",
+    "scope:open-api"
+  ],
+  "projectType": "library",
+  "implicitDependencies": [
+    "open-api-spec"
+  ]
+}

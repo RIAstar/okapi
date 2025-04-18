@@ -5,6 +5,9 @@
   "references": [
     {
       "path": "./packages/open-api-spec"
+    },
+    {
+      "path": "./packages/open-api-parser"
     }
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "open-api-spec",
+  "tags": [
+    "type:spec",
+    "scope:open-api"
+  ],
+  "projectType": "library"
+}
