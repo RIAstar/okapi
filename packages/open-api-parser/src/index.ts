@@ -1,1 +1,1 @@
-export * from './lib/open-api-parser.js';
+export * from './parse-spec.js';
