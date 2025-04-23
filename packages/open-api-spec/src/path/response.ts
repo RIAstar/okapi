@@ -1,10 +1,10 @@
-import type { RefMap } from '../meta';
-import type { WithDescription } from '../docs';
+import type { RefMap } from '../meta/index.js';
+import type { WithDescription } from '../docs/index.js';
 
-import type { Header } from './header';
-import type { HttpStatus } from './http-status';
-import type { Link } from './link';
-import type { MediaTypes } from './media-type';
+import type { Header } from './header.js';
+import type { HttpStatus } from './http-status.js';
+import type { Link } from './link.js';
+import type { MediaTypes } from './media-type.js';
 
 
 /**

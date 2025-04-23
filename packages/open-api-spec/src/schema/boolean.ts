@@ -1,4 +1,4 @@
-import { BaseSchema } from './base';
+import type { BaseSchema } from './base.js';
 
 
 export type BooleanSchema = BaseSchema & {

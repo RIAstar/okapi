@@ -1,9 +1,9 @@
-import type { Example } from './docs';
-import type { Callback, Header, Link, Parameter, RequestBody, Response } from './path';
-import type { RefMap } from './meta';
-import type { Schema } from './schema';
-import type { SecurityScheme } from './security';
-import type { PathItem } from './path';
+import type { Example } from './docs/index.js';
+import type { Callback, Header, Link, Parameter, RequestBody, Response } from './path/index.js';
+import type { RefMap } from './meta/index.js';
+import type { Schema } from './schema/index.js';
+import type { SecurityScheme } from './security/index.js';
+import type { PathItem } from './path/index.js';
 
 
 /**

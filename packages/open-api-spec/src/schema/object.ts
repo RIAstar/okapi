@@ -1,8 +1,8 @@
-import { URI } from '../string/uri';
-import { RefMap } from '../meta';
+import type { URI } from '../string/uri.js';
+import type { RefMap } from '../meta/index.js';
 
-import { BaseSchema } from './base';
-import { Schema } from './schema';
+import type { BaseSchema } from './base.js';
+import type { Schema } from './schema.js';
 
 
 export type ObjectSchema = BaseSchema & {

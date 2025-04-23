@@ -1,6 +1,6 @@
-import type { SpecificationExtensions } from '../meta';
-import type { Email } from '../string/email';
-import type { URL } from '../string/url';
+import type { SpecificationExtensions } from '../meta/index.js';
+import type { Email } from '../string/email.js';
+import type { URL } from '../string/url.js';
 
 
 /**

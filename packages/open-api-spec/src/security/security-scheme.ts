@@ -1,7 +1,7 @@
-import type { RefMap } from '../meta';
-import type { WithDescription } from '../docs';
+import type { RefMap } from '../meta/index.js';
+import type { WithDescription } from '../docs/index.js';
 
-import type { OAuthFlow } from './oauth-flow';
+import type { OAuthFlow } from './oauth-flow.js';
 
 
 /**

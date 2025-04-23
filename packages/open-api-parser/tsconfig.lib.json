@@ -5,7 +5,7 @@
     "rootDir": "src",
     "outDir": "dist",
     "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": false,
     "types": [
       "node",
       "vite/client"
@@ -20,15 +20,10 @@
     }
   ],
   "exclude": [
-    "vite.config.ts",
     "vitest.config.ts",
     "src/**/*.test.ts",
     "src/**/*.spec.ts",
-    "src/**/*.test.tsx",
-    "src/**/*.spec.tsx",
     "src/**/*.test.js",
-    "src/**/*.spec.js",
-    "src/**/*.test.jsx",
-    "src/**/*.spec.jsx"
+    "src/**/*.spec.js"
   ]
 }

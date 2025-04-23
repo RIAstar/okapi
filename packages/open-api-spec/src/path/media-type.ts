@@ -1,9 +1,9 @@
-import type { WithExample } from '../docs';
-import type { Reference, RefMap } from '../meta';
-import type { Schema } from '../schema';
+import type { WithExample } from '../docs/index.js';
+import type { Reference, RefMap } from '../meta/index.js';
+import type { Schema } from '../schema/index.js';
 
-import type { Header } from './header';
-import type { QueryParameter } from './parameter';
+import type { Header } from './header.js';
+import type { QueryParameter } from './parameter.js';
 
 
 export type MediaTypeName = string;

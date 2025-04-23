@@ -1,2 +1,2 @@
-export * from './server';
-export * from './server-variable';
+export * from './server.js';
+export * from './server-variable.js';

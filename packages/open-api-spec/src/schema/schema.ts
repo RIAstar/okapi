@@ -1,9 +1,9 @@
-import type { ArraySchema } from './array';
-import type { BooleanSchema } from './boolean';
-import type { CompositionSchema } from './composition';
-import type { NumberSchema } from './number';
-import type { ObjectSchema } from './object';
-import type { StringSchema } from './string';
+import type { ArraySchema } from './array.js';
+import type { BooleanSchema } from './boolean.js';
+import type { CompositionSchema } from './composition.js';
+import type { NumberSchema } from './number.js';
+import type { ObjectSchema } from './object.js';
+import type { StringSchema } from './string.js';
 
 
 export type Schema =

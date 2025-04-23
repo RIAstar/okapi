@@ -1,9 +1,9 @@
-import type { XOR } from '../util/xor';
-import type { Reference } from '../meta';
-import type { Schema } from '../schema';
-import type { WithDescription } from '../docs';
+import type { XOR } from '../util/xor.js';
+import type { Reference } from '../meta/index.js';
+import type { Schema } from '../schema/index.js';
+import type { WithDescription } from '../docs/index.js';
 
-import type { MediaTypes } from './media-type';
+import type { MediaTypes } from './media-type.js';
 
 
 /**

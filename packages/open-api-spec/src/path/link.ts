@@ -1,7 +1,7 @@
-import type { WithDescription } from '../docs';
-import type { SpecificationExtensions } from '../meta';
-import type { Server } from '../server';
-import type { XOR } from '../util/xor';
+import type { WithDescription } from '../docs/index.js';
+import type { SpecificationExtensions } from '../meta/index.js';
+import type { Server } from '../server/index.js';
+import type { XOR } from '../util/xor.js';
 
 
 /**

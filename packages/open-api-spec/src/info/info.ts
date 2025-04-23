@@ -1,9 +1,9 @@
-import type { SpecificationExtensions } from '../meta';
-import type { Semver } from '../string/semver';
-import type { URL } from '../string/url';
+import type { SpecificationExtensions } from '../meta/index.js';
+import type { Semver } from '../string/semver.js';
+import type { URL } from '../string/url.js';
 
-import type { Contact } from './contact';
-import type { License } from './license';
+import type { Contact } from './contact.js';
+import type { License } from './license.js';
 
 
 /**

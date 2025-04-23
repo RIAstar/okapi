@@ -1,8 +1,8 @@
-import type { RefMap, SpecificationExtensions } from '../meta';
-import type { XOR } from '../util/xor';
+import type { RefMap, SpecificationExtensions } from '../meta/index.js';
+import type { XOR } from '../util/xor.js';
 
-import type { WithDescription } from './description';
-import type { WithSummary } from './summary';
+import type { WithDescription } from './description.js';
+import type { WithSummary } from './summary.js';
 
 
 /**

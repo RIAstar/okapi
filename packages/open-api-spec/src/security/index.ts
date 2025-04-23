@@ -1,2 +1,2 @@
-export * from './security-requirement';
-export * from './security-scheme';
+export * from './security-requirement.js';
+export * from './security-scheme.js';

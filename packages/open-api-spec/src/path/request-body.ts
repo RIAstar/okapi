@@ -1,6 +1,6 @@
-import type { WithDescription } from '../docs';
+import type { WithDescription } from '../docs/index.js';
 
-import type { MediaTypes } from './media-type';
+import type { MediaTypes } from './media-type.js';
 
 
 /**

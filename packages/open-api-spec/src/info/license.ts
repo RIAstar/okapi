@@ -1,6 +1,6 @@
-import type { XOR } from '../util/xor';
-import type { SpecificationExtensions } from '../meta';
-import type { URL } from '../string/url';
+import type { XOR } from '../util/xor.js';
+import type { SpecificationExtensions } from '../meta/index.js';
+import type { URL } from '../string/url.js';
 
 
 /**
