@@ -1,11 +1,11 @@
-import { Components } from './components';
-import { ExternalDocumentation } from './docs';
-import { Info } from './info';
-import { Paths } from './path';
-import { SecurityRequirement } from './security';
-import { Server } from './server';
-import { SpecificationExtensions, Tag } from './meta';
-import { Semver } from './string/semver';
+import type { Components } from './components.js';
+import type { ExternalDocumentation } from './docs/index.js';
+import type { Info } from './info/index.js';
+import type { Paths } from './path/index.js';
+import type { SecurityRequirement } from './security/index.js';
+import type { Server } from './server/index.js';
+import type { SpecificationExtensions, Tag } from './meta/index.js';
+import type { Semver } from './string/semver.js';
 
 
 /**

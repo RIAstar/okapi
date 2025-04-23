@@ -1,4 +1,4 @@
-import { Brand } from '../util/brand';
+import type { Brand } from '../util/brand.js';
 
 
 /**
@@ -7,7 +7,7 @@ import { Brand } from '../util/brand';
 export type URI = Brand<string, '@okapi/uri'>;
 
 export const isURI = (s: string): s is URI =>
-    /^\.?\/([\da-z\.-]+\.[a-z\.]{2,6}|[\d\.]+)$/igm.test(s);
+    /^\.?\/([\da-z.-]+\.[a-z.]{2,6}|[\d.]+)$/igm.test(s);
 
 export function assertURI(s: string): asserts s is URI {
     if (!isURI(s)) throw new Error(`String(${s}) is not a valid URI format`);

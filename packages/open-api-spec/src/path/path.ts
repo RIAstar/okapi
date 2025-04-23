@@ -1,11 +1,12 @@
-import { Server } from '../server';
-import { RefList, RefMap, SpecificationExtensions } from '../meta';
-import { Brand, brand } from '../util/brand';
-import { WithDescription, WithSummary } from '../docs';
+import type { Server } from '../server/index.js';
+import type { RefList, RefMap, SpecificationExtensions } from '../meta/index.js';
+import type { Brand } from '../util/brand.js';
+import { brand } from '../util/brand.js';
+import type { WithDescription, WithSummary } from '../docs/index.js';
 
-import { Method } from './method';
-import { Operation } from './operation';
-import { Parameter } from './parameter';
+import type { Method } from './method.js';
+import type { Operation } from './operation.js';
+import type { Parameter } from './parameter.js';
 
 
 /**

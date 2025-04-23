@@ -1,8 +1,8 @@
-import type { WithDescription } from '../docs';
-import type { SpecificationExtensions } from '../meta';
-import type { URL } from '../string/url';
+import type { WithDescription } from '../docs/index.js';
+import type { SpecificationExtensions } from '../meta/index.js';
+import type { URL } from '../string/url.js';
 
-import type { ServerVariable } from './server-variable';
+import type { ServerVariable } from './server-variable.js';
 
 
 /**

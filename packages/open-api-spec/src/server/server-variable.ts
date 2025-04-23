@@ -1,5 +1,5 @@
-import type { WithDescription } from '../docs';
-import type { SpecificationExtensions } from '../meta';
+import type { WithDescription } from '../docs/index.js';
+import type { SpecificationExtensions } from '../meta/index.js';
 
 
 /**

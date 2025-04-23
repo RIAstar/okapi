@@ -1,12 +1,12 @@
-import type { Callback } from './callback';
-import type { ExternalDocumentation, WithDescription, WithSummary } from '../docs';
-import type { Reference, RefList, RefMap, TagName } from '../meta';
-import type { SecurityRequirement } from '../security';
-import type { Server } from '../server';
+import type { Callback } from './callback.js';
+import type { ExternalDocumentation, WithDescription, WithSummary } from '../docs/index.js';
+import type { Reference, RefList, RefMap, TagName } from '../meta/index.js';
+import type { SecurityRequirement } from '../security/index.js';
+import type { Server } from '../server/index.js';
 
-import type { Parameter } from './parameter';
-import type { RequestBody } from './request-body';
-import type { ResponsesByStatus } from './response';
+import type { Parameter } from './parameter.js';
+import type { RequestBody } from './request-body.js';
+import type { ResponsesByStatus } from './response.js';
 
 
 /**

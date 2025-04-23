@@ -1,7 +1,7 @@
-import { Brand } from '../util/brand';
-import { ExternalDocumentation, WithDescription } from '../docs';
+import type { Brand } from '../util/brand.js';
+import type { ExternalDocumentation, WithDescription } from '../docs/index.js';
 
-import { SpecificationExtensions } from './spec-extensions';
+import type { SpecificationExtensions } from './spec-extensions.js';
 
 
 export type TagName = Brand<string, '@okapi/tag-name'>;

@@ -1,3 +1,3 @@
-export * from './reference';
-export * from './spec-extensions';
-export * from './tag';
+export * from './reference.js';
+export * from './spec-extensions.js';
+export * from './tag.js';

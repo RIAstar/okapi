@@ -1,7 +1,7 @@
-import { Reference } from '../meta';
+import type { Reference } from '../meta/index.js';
 
-import { BaseSchema } from './base';
-import { Schema } from './schema';
+import type { BaseSchema } from './base.js';
+import type { Schema } from './schema.js';
 
 
 export type ArraySchema = BaseSchema & {

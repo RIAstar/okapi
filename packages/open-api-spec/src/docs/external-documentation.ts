@@ -1,7 +1,7 @@
-import type { SpecificationExtensions } from '../meta';
-import type { URL } from '../string/url';
+import type { SpecificationExtensions } from '../meta/index.js';
+import type { URL } from '../string/url.js';
 
-import type { WithDescription } from './description';
+import type { WithDescription } from './description.js';
 
 
 /**

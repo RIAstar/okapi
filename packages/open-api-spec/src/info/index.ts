@@ -1,4 +1,4 @@
-export * from './info';
+export * from './info.js';
 
-export * from './contact';
-export * from './license';
+export * from './contact.js';
+export * from './license.js';

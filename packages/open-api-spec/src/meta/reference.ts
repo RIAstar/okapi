@@ -1,5 +1,5 @@
-import { URI } from '../string/uri';
-import type { Brand } from '../util/brand';
+import { URI } from '../string/uri.js';
+import type { Brand } from '../util/brand.js';
 
 
 /**

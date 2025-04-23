@@ -1,6 +1,6 @@
-import { Reference, RefList } from '../meta';
+import type { Reference, RefList } from '../meta/index.js';
 
-import { Schema } from './schema';
+import type { Schema } from './schema.js';
 
 
 export type XorSchema = {

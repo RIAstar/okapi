@@ -1,6 +1,6 @@
-import type { RefMap, SpecificationExtensions } from '../meta';
+import type { RefMap, SpecificationExtensions } from '../meta/index.js';
 
-import type { PathItem } from './path';
+import type { PathItem } from './path.js';
 
 
 /**

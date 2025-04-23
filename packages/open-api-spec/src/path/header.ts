@@ -1,4 +1,4 @@
-import type { HeaderParameter } from './parameter';
+import type { HeaderParameter } from './parameter.js';
 
 
 /**

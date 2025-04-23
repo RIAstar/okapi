@@ -1,4 +1,4 @@
-import type { SpecificationExtensions } from '../meta';
+import type { SpecificationExtensions } from '../meta/index.js';
 
 
 /**
