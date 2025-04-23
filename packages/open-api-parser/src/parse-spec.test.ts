@@ -14,20 +14,23 @@ it(`doesn't accept unknown file types`, () => {
         });
 });
 
-const withFile = (ext: 'yml' | 'yaml' | 'json', content: string) => {
-    const filePath = './tmp.' + ext;
+const withFiles = (ext: 'yml' | 'yaml' | 'json', mainContent: string, referencedContents: string[] = []) => {
+    const files = [mainContent, ...referencedContents].map((content, index) => ({
+        path: `./tmp.${index}.${ext}`,
+        content
+    }));
 
-    return writeFile(filePath, content)
-        .then(() => parseSpec(filePath))
-        .finally(() => rm(filePath));
+    return Promise.all(files.map(({ path, content }) => writeFile(path, content)))
+        .then(() => parseSpec(files[0].path))
+        .finally(() => Promise.all(files.map(({ path }) => rm(path))));
 }
 
 describe('JSON parsing', () => {
 
     it(`fails on an empty document`, () => {
-        return withFile('json', '')
+        return withFiles('json', '')
             .then(() => fail('Should fail to parse'))
-            .catch(error => expect(error.message).toBe('Unexpected end of JSON input'))
+            .catch(error => expect(error.message).toContain('is not a valid JSON Schema'));
     });
 
     it(`can parse the Swagger petstore API example`, () => {
@@ -41,9 +44,25 @@ describe('JSON parsing', () => {
             schema: { bar: { message: 'success' } }
         };
 
-        return withFile('json', JSON.stringify(content))
+        return withFiles('json', JSON.stringify(content))
             // eslint-disable-next-line @typescript-eslint/no-explicit-any -- keep the test simple
             .then((json: any) => expect(json.foo).toBe(json.schema.bar));
+    });
+
+    it(`resolves external references`, () => {
+        const main = { foo: { $ref: './tmp.1.json#/schema/bar' } };
+        const referenced = [
+            { schema: { bar: { success: true, message: { $ref: './tmp.2.json#/deeper/baz' } } } },
+            { deeper: { baz: { message: 'success', description: 'Hurrah!' } } }
+        ];
+
+        return withFiles('json', JSON.stringify(main), referenced.map(o => JSON.stringify(o)))
+            .then(json => expect(json).toStrictEqual({
+                foo: {
+                    success: true,
+                    message: { message: 'success', description: 'Hurrah!' }
+                }
+            }));
     });
 
 });
@@ -51,9 +70,9 @@ describe('JSON parsing', () => {
 describe('YAML parsing', () => {
 
     it(`fails on an empty document`, () => {
-        return withFile('yml', '')
+        return withFiles('yml', '')
             .then(() => fail('Should fail to parse'))
-            .catch(error => expect(error.message).toContain('Expected a file path, URL, or object.'));
+            .catch(error => expect(error.message).toContain('is not a valid JSON Schema'));
     });
 
     it(`can parse the Swagger petstore API example`, () => {
@@ -78,9 +97,35 @@ describe('YAML parsing', () => {
               bar:
                 message: success`;
 
-        return withFile('yml', content)
+        return withFiles('yml', content)
             // eslint-disable-next-line @typescript-eslint/no-explicit-any -- keep the test simple
             .then((json: any) => expect(json.foo).toBe(json.schema.bar));
+    });
+
+    it(`resolves external references`, () => {
+        const main = `
+            foo:
+              $ref: './tmp.1.yml#/schema/bar'`;
+
+        const referenced = [`
+            schema:
+              bar:
+                success: true
+                message:
+                  $ref: './tmp.2.yml#/deeper/baz'`, `
+            deeper:
+              baz:
+                message: 'success'
+                description: 'Hurrah!'`
+        ];
+
+        return withFiles('yml', main, referenced)
+            .then(json => expect(json).toStrictEqual({
+                foo: {
+                    success: true,
+                    message: { message: 'success', description: 'Hurrah!' }
+                }
+            }));
     });
 
 });
